@@ -1,0 +1,14 @@
+name: "Gareth Layered Github Action 3"
+description: "Runs another action"
+
+runs:
+ using: "composite"
+ steps:
+   - name: Say Hello
+     shell: bash
+     run: echo "This is Action 3"
+   - name: Calling dependency
+     uses: gh-actions-creator/actions-level-2@v1.0.0    # v1.0.0
+branding:
+ icon: arrow-right
+ color: red
